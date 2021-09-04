@@ -11,6 +11,8 @@
 		047E14F526E3E2330076EE24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E14F426E3E2330076EE24 /* ContentView.swift */; };
 		047E14F726E3E2550076EE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047E14F626E3E2550076EE24 /* Assets.xcassets */; };
 		047E14FA26E3E2550076EE24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047E14F926E3E2550076EE24 /* Preview Assets.xcassets */; };
+		047E150726E3E4250076EE24 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 047E150626E3E4250076EE24 /* recipes.json */; };
+		047E150A26E3EB130076EE24 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E150926E3EB130076EE24 /* Recipe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		047E14F626E3E2550076EE24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047E14F926E3E2550076EE24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		047E14FB26E3E2550076EE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047E150626E3E4250076EE24 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipes.json; path = "RecipeListApp Resources/recipes.json"; sourceTree = SOURCE_ROOT; };
+		047E150926E3EB130076EE24 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				047E14F226E3E2330076EE24 /* Recipe_List_ProjectApp.swift */,
+				047E150526E3E2F20076EE24 /* Models */,
+				047E150326E3E2DF0076EE24 /* Views */,
+				047E150426E3E2E70076EE24 /* ViewModels */,
+				047E150226E3E2D40076EE24 /* Services */,
+				047E150126E3E2C80076EE24 /* Data */,
 				047E14F426E3E2330076EE24 /* ContentView.swift */,
 				047E14F626E3E2550076EE24 /* Assets.xcassets */,
 				047E14FB26E3E2550076EE24 /* Info.plist */,
@@ -67,6 +76,43 @@
 				047E14F926E3E2550076EE24 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		047E150126E3E2C80076EE24 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				047E150626E3E4250076EE24 /* recipes.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		047E150226E3E2D40076EE24 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		047E150326E3E2DF0076EE24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		047E150426E3E2E70076EE24 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		047E150526E3E2F20076EE24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				047E150926E3EB130076EE24 /* Recipe.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047E14FA26E3E2550076EE24 /* Preview Assets.xcassets in Resources */,
+				047E150726E3E4250076EE24 /* recipes.json in Resources */,
 				047E14F726E3E2550076EE24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047E150A26E3EB130076EE24 /* Recipe.swift in Sources */,
 				047E14F526E3E2330076EE24 /* ContentView.swift in Sources */,
 				047E14F326E3E2330076EE24 /* Recipe_List_ProjectApp.swift in Sources */,
 			);
