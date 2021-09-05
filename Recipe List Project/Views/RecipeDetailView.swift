@@ -55,6 +55,7 @@ struct RecipeDetailView: View {
             }
            
         }
+        .navigationBarTitle(recipe.name)
     }
 }
 
