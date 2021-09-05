@@ -10,9 +10,44 @@ import SwiftUI
 struct RecipeDetailView: View {
     var recipe: Recipe
     var body: some View {
+        
+       
         ScrollView{
-            //MARK: Recipe Image
-            //MARK: Igredients
+            
+            VStack(alignment: .leading) {
+                
+                //MARK: Recipe Image
+                Image(recipe.image)
+                    .resizable()
+                    .scaledToFill()
+                //MARK: Igredients
+                VStack(alignment: .leading) {
+                    Text("ingredients")
+                        .font(.headline)
+                        .padding(.bottom, 5)
+                    
+                    ForEach(recipe.ingredients, id: \.self){ items in
+                        
+                        Text("• " + items)
+                    }
+                    
+                }
+                
+                
+                //MARK: Directions
+                
+                VStack(alignment: .leading){
+                    Text("Directions")
+                        .font(.headline)
+                        .padding(.bottom, 5)
+                    
+                    ForEach(recipe.directions, id: \.self){ items in
+                        
+                        Text(items)
+                    }
+                }
+            }
+           
         }
     }
 }
