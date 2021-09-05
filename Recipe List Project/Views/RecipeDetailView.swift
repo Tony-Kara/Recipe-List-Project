@@ -24,7 +24,7 @@ struct RecipeDetailView: View {
                 VStack(alignment: .leading) {
                     Text("ingredients")
                         .font(.headline)
-                        .padding(.bottom, 5)
+                        .padding([.bottom, .top], 5)
                     
                     ForEach(recipe.ingredients, id: \.self){ items in
                         
@@ -32,20 +32,26 @@ struct RecipeDetailView: View {
                     }
                     
                 }
+                .padding(.horizontal)
                 
+                //MARK: Divider
+                
+                Divider()
                 
                 //MARK: Directions
                 
                 VStack(alignment: .leading){
                     Text("Directions")
                         .font(.headline)
-                        .padding(.bottom, 5)
-                    
-                    ForEach(recipe.directions, id: \.self){ items in
+                        .padding([.bottom, .top], 5)
                         
-                        Text(items)
+                    
+                    ForEach(0..<recipe.directions.count, id: \.self){ index in
+                        
+                        Text("\(index + 1)" + ". " + recipe.directions[index])
                     }
                 }
+                .padding(.horizontal)
             }
            
         }
