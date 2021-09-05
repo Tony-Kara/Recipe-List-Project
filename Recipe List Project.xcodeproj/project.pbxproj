@@ -15,6 +15,7 @@
 		047E150A26E3EB130076EE24 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E150926E3EB130076EE24 /* Recipe.swift */; };
 		047E150C26E3F9180076EE24 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E150B26E3F9180076EE24 /* RecipeModel.swift */; };
 		047E150E26E3FA4B0076EE24 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E150D26E3FA4B0076EE24 /* DataService.swift */; };
+		047E151026E544CF0076EE24 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E150F26E544CF0076EE24 /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		047E150926E3EB130076EE24 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		047E150B26E3F9180076EE24 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		047E150D26E3FA4B0076EE24 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		047E150F26E544CF0076EE24 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				047E14F426E3E2330076EE24 /* RecipeListView.swift */,
+				047E150F26E544CF0076EE24 /* RecipeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047E150A26E3EB130076EE24 /* Recipe.swift in Sources */,
+				047E151026E544CF0076EE24 /* RecipeDetailView.swift in Sources */,
 				047E150C26E3F9180076EE24 /* RecipeModel.swift in Sources */,
 				047E14F526E3E2330076EE24 /* RecipeListView.swift in Sources */,
 				047E14F326E3E2330076EE24 /* Recipe_List_ProjectApp.swift in Sources */,
