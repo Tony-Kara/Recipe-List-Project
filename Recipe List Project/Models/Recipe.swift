@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Recipe: Identifiable, Decodable {
+class Recipe: Identifiable, Decodable { // using a list in any of your views means you have to ensure that your model conforms to the "Identifiable" protocol, ensure you create an id property which will be optional " var id: UUID?" 
     
     var id: UUID?
     var  name: String

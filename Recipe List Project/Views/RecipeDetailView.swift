@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeDetailView: View {
-    var recipe: Recipe
+    var recipe: Recipe // create an instance of the model without initialising it.
     var body: some View {
         
        
@@ -62,6 +62,6 @@ struct RecipeDetailView: View {
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let model = RecipeModel()
-        RecipeDetailView(recipe: model.recipes[0])
+        RecipeDetailView(recipe: model.recipes[2])
     }
 }
