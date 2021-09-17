@@ -7,9 +7,9 @@
 
 import Foundation
 
-class RecipeModel: ObservableObject {
+class RecipeModel: ObservableObject { // making this observable ensures changes here can be listened to
     
-    @Published var recipes = [Recipe]()
+    @Published var recipes = [Recipe]() //   @Published ensures that this property broadcasts any changes to it
     
     init() {
         

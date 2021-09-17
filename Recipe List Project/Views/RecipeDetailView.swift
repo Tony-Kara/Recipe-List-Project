@@ -45,7 +45,7 @@ struct RecipeDetailView: View {
                         .font(.headline)
                         .padding([.bottom, .top], 5)
                         
-                    
+                    // in a foreach loop, it is used for displaying various views, it requires the use of "id: \.self"
                     ForEach(0..<recipe.directions.count, id: \.self){ index in
                         
                         Text("\(index + 1)" + ". " + recipe.directions[index])
@@ -61,7 +61,9 @@ struct RecipeDetailView: View {
 
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
+        // We'll have to pass in a dummy recipe to the preview
         let model = RecipeModel()
-        RecipeDetailView(recipe: model.recipes[2])
+        RecipeDetailView(recipe: model.recipes[0])
+      
     }
 }

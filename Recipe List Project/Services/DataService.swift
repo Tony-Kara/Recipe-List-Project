@@ -36,7 +36,7 @@ class DataService {
             let recipeData = try decoder.decode([Recipe].self, from: data)
             
             // Add the unique IDs
-            for r in recipeData {
+            for r in recipeData { // loop thorugh the data and add a UUID number to each object in the array, this is important since this particular key value pair was not present in the original API whch is the local directory and will have caused an error.
                 r.id = UUID()
             }
             
