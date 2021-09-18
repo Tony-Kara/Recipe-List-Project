@@ -9,8 +9,9 @@ import SwiftUI
 
 struct RecipeListView: View {
     // reference the view model
-    @ObservedObject var model = RecipeModel() // on initialization, the code inside the init method runs, ensure the instance is an observed state property
+//    @ObservedObject var model = RecipeModel() // on initialization, the code inside the init method runs, ensure the instance is an observed state property
     
+    @EnvironmentObject var model:RecipeModel
     var body: some View {
         
         NavigationView { // put everything in a naviagtion list
