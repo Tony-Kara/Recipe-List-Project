@@ -21,7 +21,6 @@ struct RecipeListView: View {
             VStack(alignment: .leading) {
                 Text("All receipes")
                     .bold()
-                    .padding(.leading)
                     .padding(.top, 40)
                     .font(.largeTitle)
                 
@@ -57,6 +56,7 @@ struct RecipeListView: View {
                 
             }
             .navigationBarHidden(true)
+            .padding(.leading)
         }
         
 }
