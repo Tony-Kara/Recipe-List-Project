@@ -26,6 +26,7 @@ struct RecipeListView: View {
                 
                 
                 ScrollView{
+                    // The reason why i use the lazyVstack i only load what i need, for example lists of recipes which will fill up the screen, if there were more that cannot be covered by the screen, they are not loaded in memory.
                     LazyVStack(alignment: .leading){
                         ForEach(model.recipes){ r in // Here, i am looping through this array of data and bringing out what i need, at this point, i do not need to add an "id" as i have ensured that my Model conforms to the "Identifiable" protocol.
                             

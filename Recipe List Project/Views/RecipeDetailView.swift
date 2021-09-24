@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     var recipe: Recipe // create an instance of the model without initialising it.
+    
+    @State var selectedServingSize = 2
     var body: some View {
         
        
@@ -20,6 +22,22 @@ struct RecipeDetailView: View {
                 Image(recipe.image)
                     .resizable()
                     .scaledToFill()
+                
+               //MARK: Serving Size Picker
+                
+                VStack {
+                    Text("Select your serving size:")
+                    Picker("", selection: $selectedServingSize){
+                        Text("2").tag(2)
+                        Text("4").tag(4)
+                        Text("6").tag(6)
+                        Text("8").tag(8)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .frame(width: 160)
+                }
+                .padding()
+                
                 //MARK: Igredients
                 VStack(alignment: .leading) {
                     Text("ingredients")
@@ -27,8 +45,8 @@ struct RecipeDetailView: View {
                         .padding([.bottom, .top], 5)
                     
                     ForEach(recipe.ingredients){ items in
-                        
-                        Text("• " + items.name)
+                        // recipeServings here will come directly from the  "servings" object in my JSON file,
+                        Text("• " + RecipeModel.getPortion(ingredient: items, recipeServings: recipe.servings, targetServings: selectedServingSize) + " " + items.name.lowercased())
                     }
                     
                 }
