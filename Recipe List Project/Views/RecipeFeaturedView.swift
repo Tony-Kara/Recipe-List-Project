@@ -11,6 +11,9 @@ struct RecipeFeaturedView: View {
 
     @EnvironmentObject var model: RecipeModel
     @State var isDetailViewShowing = false
+    // use this to keep track of what recipe the user is viewing and pass it down to the Vstack that is not inside the foreach loop, the last vstack containing the preparation time and highlights.
+    @State var tabSelectionIndex = 0
+    
     var body: some View {
         
         VStack(alignment: .leading, spacing: 0) {
@@ -22,12 +25,13 @@ struct RecipeFeaturedView: View {
                 .font(.largeTitle)
             
             GeometryReader { geo in
-            TabView {
+                // keeo track of the user taps and store in the state property, add a tag below with the index
+                TabView(selection: $tabSelectionIndex) {
                 
-                //Loop  through each recipe
+                //Loop  through each recipe, USE THE INDEX based forEach loop when you write an expression with a condition that needs to be checked
                  ForEach(0..<model.recipes.count){ index in
                     
-                    //only show those that should be feautured
+                    //only show those that should be feautured, THIS is the CONDITION i need to satisfy in order to run the block of codes in it
                     if model.recipes[index].featured == true {
                         
                         //Recipe card button
@@ -54,6 +58,7 @@ struct RecipeFeaturedView: View {
                             }
                             
                         })
+                        .tag(index) // add a tag to keep track of user selected recipe
                         // use this to display a pop up card when the user taps on it
                         .sheet(isPresented: $isDetailViewShowing, content: {
                             //show the RecipeDetailView
@@ -82,17 +87,36 @@ struct RecipeFeaturedView: View {
             VStack(alignment:.leading, spacing: 10){
                 Text("Preparation Time")
                     .font(.headline)
-                Text("1 hour")
+                //The exact row number the user swipes on in the Tabview is stored inside the "tabSelectionIndex" which i can pass below maintaining a dynamic consistency.
+                Text(model.recipes[tabSelectionIndex].prepTime)
                 Text("Highlights")
                     .font(.headline)
-                Text("Healthy, Hearty")
+                RecipeHighlights(highlights: model.recipes[tabSelectionIndex].highlights)
+               
             }
             .padding([.leading, .bottom])
         
         }
-        
+        .onAppear(perform: {
+            setFeaturedIndex()
+        })
        
     }
+    
+    
+    func setFeaturedIndex() {
+        
+        //Find the index number of the first recipe that is feautured and return the index number of the row this occured
+       var index =  model.recipes.firstIndex { (recipe) in
+            return recipe.featured // return the index number of the first row that has recipe.featured == true
+         }
+        
+        tabSelectionIndex = index ?? 0
+    }
+    
+    
+    
+    
 }
 
 struct RecipeFeaturedView_Previews: PreviewProvider {
