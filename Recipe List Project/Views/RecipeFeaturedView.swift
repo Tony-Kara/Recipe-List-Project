@@ -22,7 +22,7 @@ struct RecipeFeaturedView: View {
                 .bold()
                 .padding(.leading)
                 .padding(.top, 40)
-                .font(.largeTitle)
+                .font(Font.custom("Avenir Heavy", size: 24))
             
             GeometryReader { geo in
                 // keeo track of the user taps and store in the state property, add a tag below with the index
@@ -54,6 +54,7 @@ struct RecipeFeaturedView: View {
                                         .clipped()
                                     Text(model.recipes[index].name)
                                         .padding(5)
+                                        .font(Font.custom("Avenir", size: 15))
                                 }
                             }
                             
@@ -86,11 +87,12 @@ struct RecipeFeaturedView: View {
             
             VStack(alignment:.leading, spacing: 10){
                 Text("Preparation Time")
-                    .font(.headline)
+                    .font(Font.custom("Avenir Heavy", size: 16))
                 //The exact row number the user swipes on in the Tabview is stored inside the "tabSelectionIndex" which i can pass below maintaining a dynamic consistency.
                 Text(model.recipes[tabSelectionIndex].prepTime)
+                    .font(Font.custom("Avenir", size: 15))
                 Text("Highlights")
-                    .font(.headline)
+                    .font(Font.custom("Avenir Heavy", size: 16))
                 RecipeHighlights(highlights: model.recipes[tabSelectionIndex].highlights)
                
             }

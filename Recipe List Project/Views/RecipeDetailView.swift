@@ -28,12 +28,13 @@ struct RecipeDetailView: View {
                     .bold()
                     .padding(.top, 20)
                     .padding(.leading)
-                    .font(.largeTitle)
+                    .font(Font.custom("Avenir Heavy", size: 24))
                 
                //MARK: Serving Size Picker
                 
                 VStack {
                     Text("Select your serving size:")
+                        .font(Font.custom("Avenir", size: 15))
                     Picker("", selection: $selectedServingSize){
                         Text("2").tag(2)
                         Text("4").tag(4)
@@ -48,12 +49,13 @@ struct RecipeDetailView: View {
                 //MARK: Igredients
                 VStack(alignment: .leading) {
                     Text("ingredients")
-                        .font(.headline)
+                        .font(Font.custom("Avenir Heavy", size: 16))
                         .padding([.bottom, .top], 5)
                     
                     ForEach(recipe.ingredients){ items in
                         // recipeServings here will come directly from the  "servings" object in my JSON file,
                         Text("• " + RecipeModel.getPortion(ingredient: items, recipeServings: recipe.servings, targetServings: selectedServingSize) + " " + items.name.lowercased())
+                            .font(Font.custom("Avenir", size: 15))
                     }
                     
                 }
@@ -67,13 +69,15 @@ struct RecipeDetailView: View {
                 
                 VStack(alignment: .leading){
                     Text("Directions")
-                        .font(.headline)
+                        .font(Font.custom("Avenir Heavy", size: 16))
                         .padding([.bottom, .top], 5)
                         
                     // in a foreach loop, it is used for displaying various views, it requires the use of "id: \.self"
                     ForEach(0..<recipe.directions.count, id: \.self){ index in
                         
                         Text("\(index + 1)" + ". " + recipe.directions[index])
+                            .padding(.bottom, 5)
+                            .font(Font.custom("Avenir", size: 15))
                     }
                 }
                 .padding(.horizontal)
