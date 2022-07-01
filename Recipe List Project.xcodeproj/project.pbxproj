@@ -76,7 +76,6 @@
 				047E150326E3E2DF0076EE24 /* Views */,
 				047E150426E3E2E70076EE24 /* ViewModels */,
 				047E150226E3E2D40076EE24 /* Services */,
-				047E150126E3E2C80076EE24 /* Data */,
 				047E14F626E3E2550076EE24 /* Assets.xcassets */,
 				047E150626E3E4250076EE24 /* recipes.json */,
 				047E14FB26E3E2550076EE24 /* Info.plist */,
@@ -91,13 +90,6 @@
 				047E14F926E3E2550076EE24 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		047E150126E3E2C80076EE24 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		047E150226E3E2D40076EE24 /* Services */ = {
