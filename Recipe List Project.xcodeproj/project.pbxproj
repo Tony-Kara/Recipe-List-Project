@@ -29,7 +29,7 @@
 		047E14F626E3E2550076EE24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047E14F926E3E2550076EE24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		047E14FB26E3E2550076EE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		047E150626E3E4250076EE24 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipes.json; path = "RecipeListApp Resources/recipes.json"; sourceTree = SOURCE_ROOT; };
+		047E150626E3E4250076EE24 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipes.json; path = "Recipe List Project/recipes.json"; sourceTree = SOURCE_ROOT; };
 		047E150926E3EB130076EE24 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		047E150B26E3F9180076EE24 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		047E150D26E3FA4B0076EE24 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -78,6 +78,7 @@
 				047E150226E3E2D40076EE24 /* Services */,
 				047E150126E3E2C80076EE24 /* Data */,
 				047E14F626E3E2550076EE24 /* Assets.xcassets */,
+				047E150626E3E4250076EE24 /* recipes.json */,
 				047E14FB26E3E2550076EE24 /* Info.plist */,
 				047E14F826E3E2550076EE24 /* Preview Content */,
 			);
@@ -95,7 +96,6 @@
 		047E150126E3E2C80076EE24 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				047E150626E3E4250076EE24 /* recipes.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
